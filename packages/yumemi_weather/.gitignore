@@ -17,3 +17,6 @@ pubspec.lock
 
 # API Docs
 /gh-pages/
+
+# FVM Version Cache
+.fvm/

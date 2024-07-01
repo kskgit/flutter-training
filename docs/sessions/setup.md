@@ -4,25 +4,25 @@
 
 ## 課題
 
-- [ ] 作成した研修用のリポジトリにメンターをコラボレーターとして招待する
-- [ ] 作成した研修用のリポジトリの GitHub Actions の権限を「Allow all actions and reusable workflows」に設定
-- [ ] 作成した研修用のリポジトリの GitHub Actions のワークフローの権限を「Read and write permissions」に設定
-- [ ] 作成した研修用のリポジトリでプルリクエストマージ後に自動でヘッドブランチが削除されるように設定
-- [ ] 作成した研修用のリポジトリにルールセットを作成
-  - [ ] 対象のブランチはデフォルトブランチ
-  - [ ] 削除を許可しない
-  - [ ] マージ前にプルリクエスト必須
-    - [ ] マージ前に１人の承認を必須
-    - [ ] マージ前に会話の解決必須
-  - [ ] フォースプッシュを許可しない
-- [ ] 使用しているチャットツールで GitHub 通知の購読設定
+- [x] 作成した研修用のリポジトリにメンターをコラボレーターとして招待する
+- [x] 作成した研修用のリポジトリの GitHub Actions の権限を「Allow all actions and reusable workflows」に設定
+- [x] 作成した研修用のリポジトリの GitHub Actions のワークフローの権限を「Read and write permissions」に設定
+- [x] 作成した研修用のリポジトリでプルリクエストマージ後に自動でヘッドブランチが削除されるように設定
+- [x] 作成した研修用のリポジトリにルールセットを作成
+  - [x] 対象のブランチはデフォルトブランチ
+  - [x] 削除を許可しない
+  - [x] マージ前にプルリクエスト必須
+    - [x] マージ前に１人の承認を必須
+    - [x] マージ前に会話の解決必須
+  - [x] フォースプッシュを許可しない
+- [x] 使用しているチャットツールで GitHub 通知の購読設定
   - Slackコマンド:
     - `/github subscribe ユーザー名/リポジトリ名 issues pulls reviews comments`
     - `/github unsubscribe ユーザー名/リポジトリ名 commits releases deployments workflows branches discussions`
-- [ ] 作成した研修用のリポジトリを `git clone [url]` して、ローカルにコピー
-- [ ] [fvm] をインストール
-- [ ] プロジェクトルートで `fvm install` コマンドを実行して対象の Flutter SDK をインストール
-- [ ] IDE の最新安定板をインストール
+- [x] 作成した研修用のリポジトリを `git clone [url]` して、ローカルにコピー
+- [x] [fvm] をインストール
+- [x] プロジェクトルートで `fvm install` コマンドを実行して対象の Flutter SDK をインストール
+- [x] IDE の最新安定板をインストール
 - [ ] Flutter の設定（ `fvm flutter doctor` を実行して確認）
 - [ ] Android・iOS でアプリを実行
 - [ ] `.github/workflows-templates` ディレクトリを `.github/workflows` にリネーム
