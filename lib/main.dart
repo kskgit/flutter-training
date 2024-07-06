@@ -24,7 +24,7 @@ class MainApp extends StatelessWidget {
                     builder: (context, constraints) {
                       final size = constraints.maxWidth;
                       final sideSize = size * 0.5;
-                      return Container(
+                      return SizedBox(
                         width: sideSize,
                         height: sideSize,
                         child: const Center(
