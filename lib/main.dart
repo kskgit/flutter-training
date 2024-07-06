@@ -11,19 +11,28 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
-              child: FractionallySizedBox(
-                widthFactor: 0.5,
-                heightFactor: 0.5,
-                alignment: FractionalOffset.center,
-                child: Placeholder(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 100, // 任意の固定幅
+                    height: 100,
+                    child: const FractionallySizedBox(
+                      widthFactor: 0.5,
+                      heightFactor: 0.5,
+                      alignment: FractionalOffset.center,
+                      child: Placeholder(),
+                    ),
+                  ),
+                ],
               ),
-            ),
+            )
           ],
         ),
       ),
