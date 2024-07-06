@@ -27,15 +27,10 @@ class MainApp extends StatelessWidget {
                       return SizedBox(
                         width: sideSize,
                         height: sideSize,
-                        child: const Center(
-                          child: Placeholder(),
-                        ),
+                        child: const Placeholder(),
                       );
                     },
                   ),
-                  // Expanded(
-                  //   child:
-                  // ),
                 ],
               ),
             ),
