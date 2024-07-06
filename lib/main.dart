@@ -27,12 +27,8 @@ class MainApp extends StatelessWidget {
                       return Container(
                         width: sideSize,
                         height: sideSize,
-                        color: Colors.blue,
                         child: const Center(
-                          child: Text(
-                            'Square Box',
-                            style: TextStyle(color: Colors.white, fontSize: 24),
-                          ),
+                          child: Placeholder(),
                         ),
                       );
                     },
