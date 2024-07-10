@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -30,13 +33,18 @@ class MainApp extends StatelessWidget {
                         child: const Column(
                           children: [
                             Expanded(
+                              // TODO 縦幅を横幅に揃える
                               child: Placeholder(),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Text('テスト'),
-                                Text('テスト'),
+                                TemperatureDisplay(
+                                  textColor: TextStyle(color: Colors.red),
+                                ),
+                                TemperatureDisplay(
+                                  textColor: TextStyle(color: Colors.blue),
+                                ),
                               ],
                             ),
                           ],
@@ -51,5 +59,33 @@ class MainApp extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class TemperatureDisplay extends StatelessWidget {
+  const TemperatureDisplay({
+    required this.textColor,
+    super.key,
+  });
+  final TextStyle textColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 16,
+        bottom: 16,
+      ),
+      child: Text(
+        '** ℃',
+        style: textColor,
+      ),
+    );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty<TextStyle>('textColor', textColor));
   }
 }
