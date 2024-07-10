@@ -27,7 +27,20 @@ class MainApp extends StatelessWidget {
                       return SizedBox(
                         width: sideSize,
                         height: sideSize,
-                        child: const Placeholder(),
+                        child: const Column(
+                          children: [
+                            Expanded(
+                              child: Placeholder(),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text('テスト'),
+                                Text('テスト'),
+                              ],
+                            ),
+                          ],
+                        ),
                       );
                     },
                   ),
