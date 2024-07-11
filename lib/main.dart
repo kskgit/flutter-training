@@ -29,14 +29,13 @@ class MainApp extends StatelessWidget {
                       final sideSize = size * 0.5;
                       return SizedBox(
                         width: sideSize,
-                        height: sideSize,
-                        child: const Column(
+                        child: Column(
                           children: [
-                            Expanded(
-                              // TODO 縦幅を横幅に揃える
-                              child: Placeholder(),
+                            Placeholder(
+                              fallbackWidth: sideSize,
+                              fallbackHeight: sideSize,
                             ),
-                            Row(
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 TemperatureDisplay(
