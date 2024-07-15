@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
@@ -34,21 +35,34 @@ class MainApp extends StatelessWidget {
                             Placeholder(
                               fallbackHeight: sideSize,
                             ),
+                            const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                TemperatureDisplay(
+                                  textColor: TextStyle(color: Colors.red),
+                                ),
+                                TemperatureDisplay(
+                                  textColor: TextStyle(color: Colors.blue),
+                                ),
+                              ],
+                            ),
                             const Padding(
-                              padding: EdgeInsets.only(top: 16, bottom: 16),
+                              padding: EdgeInsets.only(top: 80),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  TemperatureDisplay(
-                                    textColor: TextStyle(color: Colors.red),
+                                  Text(
+                                    'Close',
+                                    style: TextStyle(color: Colors.blue),
                                   ),
-                                  TemperatureDisplay(
-                                    textColor: TextStyle(color: Colors.blue),
-                                  ),
+                                  Text(
+                                    'Reload',
+                                    style: TextStyle(color: Colors.blue),
+                                  )
                                 ],
                               ),
-                            ),
+                            )
                           ],
                         ),
                       );
