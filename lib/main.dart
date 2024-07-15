@@ -32,7 +32,6 @@ class MainApp extends StatelessWidget {
                         child: Column(
                           children: [
                             Placeholder(
-                              fallbackWidth: sideSize,
                               fallbackHeight: sideSize,
                             ),
                             const Row(
