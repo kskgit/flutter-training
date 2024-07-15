@@ -34,16 +34,20 @@ class MainApp extends StatelessWidget {
                             Placeholder(
                               fallbackHeight: sideSize,
                             ),
-                            const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                TemperatureDisplay(
-                                  textColor: TextStyle(color: Colors.red),
-                                ),
-                                TemperatureDisplay(
-                                  textColor: TextStyle(color: Colors.blue),
-                                ),
-                              ],
+                            const Padding(
+                              padding: EdgeInsets.only(top: 16, bottom: 16),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  TemperatureDisplay(
+                                    textColor: TextStyle(color: Colors.red),
+                                  ),
+                                  TemperatureDisplay(
+                                    textColor: TextStyle(color: Colors.blue),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
