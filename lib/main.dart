@@ -50,10 +50,7 @@ class MainApp extends StatelessWidget {
                             'Close',
                             style: TextStyle(color: Colors.blue),
                           ),
-                          Text(
-                            'Reload',
-                            style: TextStyle(color: Colors.blue),
-                          )
+                          ReloadButton()
                         ],
                       ),
                     ),
@@ -63,6 +60,25 @@ class MainApp extends StatelessWidget {
             },
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ReloadButton extends StatelessWidget {
+  const ReloadButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        debugPrint('クリック');
+      },
+      child: const Text(
+        'Reload',
+        style: TextStyle(color: Colors.blue),
       ),
     );
   }
