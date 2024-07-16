@@ -17,69 +17,59 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  LayoutBuilder(
-                    builder: (context, constraints) {
-                      final size = constraints.maxWidth;
-                      final sideSize = size * 0.5;
-                      return SizedBox(
-                        width: sideSize,
-                        child: Column(
-                          children: [
-                            Placeholder(
-                              fallbackHeight: sideSize,
-                            ),
-                            const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                TemperatureDisplay(
-                                  textColor: TextStyle(color: Colors.red),
-                                ),
-                                TemperatureDisplay(
-                                  textColor: TextStyle(color: Colors.blue),
-                                ),
-                              ],
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 80),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Text(
-                                    'Close',
-                                    style: TextStyle(color: Colors.blue),
-                                  ),
-                                  Text(
-                                    'Reload',
-                                    style: TextStyle(color: Colors.blue),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
+        body: Center(
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              final size = constraints.maxWidth;
+              final sideSize = size * 0.5;
+              return SizedBox(
+                width: sideSize,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Placeholder(
+                      fallbackHeight: sideSize,
+                    ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TemperatureDisplayText(
+                          textColor: TextStyle(color: Colors.red),
                         ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ],
+                        TemperatureDisplayText(
+                          textColor: TextStyle(color: Colors.blue),
+                        ),
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 80),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            'Close',
+                            style: TextStyle(color: Colors.blue),
+                          ),
+                          Text(
+                            'Reload',
+                            style: TextStyle(color: Colors.blue),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
         ),
       ),
     );
   }
 }
 
-class TemperatureDisplay extends StatelessWidget {
-  const TemperatureDisplay({
+class TemperatureDisplayText extends StatelessWidget {
+  const TemperatureDisplayText({
     required this.textColor,
     super.key,
   });
