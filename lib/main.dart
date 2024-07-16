@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:yumemi_weather/yumemi_weather.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -50,7 +51,7 @@ class MainApp extends StatelessWidget {
                             'Close',
                             style: TextStyle(color: Colors.blue),
                           ),
-                          ReloadButton()
+                          ReloadButton(),
                         ],
                       ),
                     ),
@@ -74,7 +75,9 @@ class ReloadButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        debugPrint('クリック');
+        final yumemiWeather = YumemiWeather();
+        final weatherCondition = yumemiWeather.fetchSimpleWeather();
+        debugPrint('Weather Condition: $weatherCondition'); // "sunny"
       },
       child: const Text(
         'Reload',
